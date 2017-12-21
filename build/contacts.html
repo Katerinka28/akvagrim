@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Title of template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/style.css">
+    <script src="js/app.js"></script>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header clearfix">
+        <div class="container">
+          <div class="header__toggle clearfix"><span class="header__toggle-item"></span><span class="header__toggle-item"></span><span class="header__toggle-item"></span>
+          </div>
+          <div class="header__part">
+            <div class="header__block">   <a class="header__logo-wrapper clearfix" href="index.html"><img class="header__logo" src="./img/logo-mini-w.png" title="Home page" alt="Home page"/></a>
+            </div>
+            <div class="header__block header-mob__hide">       
+              <div class="header__nav clearfix"><a class="header__link clearfix" href="about.html">Про аквагрим</a><a class="header__link clearfix" href="gallery.html">Мои работы</a><a class="header__link clearfix" href="contacts.html">Контакты</a>
+              </div>
+            </div>
+          </div>
+          <div class="header__mobile">
+            <div class="header__mob-wrapper">
+              <div class="header__mob-content">
+                <div class="header__mob-menu"><a class="header__logo-wrapper clearfix" href="index.html"><img class="header__logo" src="./img/logo-w.png" alt="" role="presentation"/></a>
+                  <div class="header__nav clearfix">
+                    <A class="header__link" href="about.html">Про аквагрим</A>
+                    <A class="header__link" href="gallery.html">Мои работы</A>
+                    <A class="header__link" href="contacts.html">Контакты</A>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preloader"><img src="./img/752.svg"></div>
+      <div class="container">
+        <div class="content">
+          <div class="content__title">
+            <h1>Контактная информация</h1>
+          </div>
+          <div class="content__text">
+            <p>bla bla////    </p>
+          </div>
+          <div class="social"><a class="insta" href="http://instagram.com/akvagrim.brd" target="_blank"></a><a class="vk" href="http://vk.com/akvagrim_v_brd" target="_blank"></a><a class="viber" href="href=&quot;viber://add?number=+380662823881&quot;" target="_blank"></a>
+          </div>
+          <form class="feedback clearfix">
+            <div class="feedback__title"> 
+              <h2>Напишите мне и мы ...</h2>
+            </div>
+            <div class="feedback__contain">
+              <label class="title" for="name">Имя</label>
+              <input class="name" type="text" name="name" autofocus id="name" data-msg-required="Это поле обязательно к заполнению">
+            </div>
+            <div class="feedback__contain">
+              <label class="title" for="tel">Телефон</label>
+              <input class="tel" type="tel" name="tel" id="tel" data-msg-required="Это поле обязательно к заполнению">
+            </div>
+            <div class="feedback__contain">
+              <label class="title" for="mail">Email</label>
+              <input class="mail" type="text" name="mail" id="mail" data-msg-required="Это поле обязательно к заполнению" data-msg-emailMethod="Введите корректный email адрес">
+            </div>
+            <div class="feedback__contain">
+              <label class="title" for="message">Сообщение</label>
+              <input class="message" type="text" name="message" id="message" data-msg-required="Это поле обязательно к заполнению">
+            </div>
+            <div class="feedback__contain">
+              <button class="submit" type="submit">Отправить сообщение</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="callbackthanks mfp-hide zoom-anim-dialog" id="callbackthanks">
+        <div class="callbackthanks__title">
+          <H2>Спасибо!</H2>
+        </div>
+        <div class="callbackthanks__text"> 
+          <p>Я свяжусь с Вами в ближайшее время               </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer container">
+      <div class="footer__copiright">
+        <p>© 2018  Авторские права защищены</p>
+      </div>
+      <div class="social"><a class="insta" href="http://instagram.com/akvagrim.brd" target="_blank"></a><a class="vk" href="http://vk.com/akvagrim_v_brd" target="_blank"></a>
+      </div>
+    </div>
+    <script>
+      $(window).on('load', function() {
+          $('.preloader').fadeOut()
+      
+      })
+    </script>
+  </body>
+</html>

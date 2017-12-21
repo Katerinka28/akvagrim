@@ -1,0 +1,33 @@
+//- mixin icon(name)
+//-   svg(class="icon icon-" + name)
+//-     use(xlink:href="#icon-" + name)
+include ../bemto/bemto
+-
+  set_bemto_settings({
+    prefix: '',
+    element: '__',
+    modifier: '--'
+  })
+include ../pug/mixins/mixin
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    block title
+      title Jade Layout Template
+
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+    meta(name="format-detection" content="telephone=no")      
+    link(rel="stylesheet" media="all" href="css/style.css")
+
+    script(src="js/app.js")
+    link(rel="icon" href="img/favicon.ico" type="image/x-icon")  
+  body
+
+    .wrapper
+      include ./header/header
+      block content
+
+    include ./footer/footer 
+    
+    block additional-scripts

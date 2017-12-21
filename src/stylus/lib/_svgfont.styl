@@ -1,0 +1,59 @@
+@font-face
+	font-family: "svgfont"
+	src: url('fonts/svgfont.eot')
+	src: url('fonts/svgfont.eot?#iefix') format('eot'), url('fonts/svgfont.woff') format('woff'), url('fonts/svgfont.woff2') format('woff2'), url('fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+$icon-sepa= "\EA01"
+$icon-enter-icon= "\EA03"
+$icon-fb= "\EA04"
+$icon-insta= "\EA05"
+$icon-left-arrow= "\EA06"
+$icon-arrow-down= "\EA07"
+$icon-right-arrow= "\EA08"
+$icon-yb= "\EA09"
+$icon-location= "\EA0A"
+$icon-letter= "\EA10"
+$icon-trash= "\EA11"
+$icon-pen= "\EA12"
+
+
+$icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend $icon
+	display: inline-block
+
+.icon-sepa:before
+	content: $icon-sepa
+.icon-enter-icon:before
+	content: $icon-enter-icon
+.icon-fb:before
+	content: $icon-fb
+.icon-insta:before
+	content: $icon-insta
+.icon-left-arrow:before
+	content: $icon-left-arrow
+.icon-arrow-down:before
+	content: $icon-arrow-down
+.icon-right-arrow:before
+	content: $icon-right-arrow
+.icon-yb:before
+	content: $icon-yb
+.icon-location:before
+	content: $icon-location
+.icon-letter:before
+	content: $icon-letter
+.icon-trash:before
+	content: $icon-trash
+.icon-pen:before
+	content: $icon-pen

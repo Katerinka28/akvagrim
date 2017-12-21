@@ -1,0 +1,69 @@
+extends _layout
+
+block title
+    title Title of template
+
+    
+
+block content
+    
+    .preloader
+        img(src='./img/752.svg')
+    
+ 
+
+                    
+    +b.swipper-container.clearfix
+        .swiper-wrapper
+            .swiper-slide(style=" background-image: url(./img/slide1-ipad-v.png)")
+  
+                //- .swiper-text
+                //-     h2 TASTEFULLY UNEXPECTED&#8482;
+                    //- p VODKA WITH NATURAL FLAVORS
+
+
+
+
+            //- .swiper-slide(style=" background-image: url(./img/slide4.jpg)")
+              
+            //-     .swiper-text
+            //-         h2 TASTEFULLY UNEXPECTED&#8482;
+                    
+             
+            .swiper-slide(style=" background-image: url(./img/slide2-ipad-v.png)")
+                
+           
+                //- .swiper-text
+                //-     h2 TASTEFULLY UNEXPECTED&#8482;
+                    
+            //- .swiper-slide(style=" background-image: url(./img/slide3.png)")
+                
+           
+            //-     .swiper-text
+            //-         h2 TASTEFULLY UNEXPECTED&#8482;
+                       
+            
+           
+    //- +b.main-spoon.clearfix.A(href="long-story-short.html")
+    //-     +e.img
+    //-         img(src='./img/spoon.png')
+    //-     +e.text
+    //-         h2 LONG STORY SHORT
+    //-         span.arrow.icon-shevron-right(href="long-story-short.html")
+    //- +b.gimme-some-index.container
+    //-     +e.text
+    //-         H2#gimme-title GIMME SOME
+    //-         H2 for more information
+    //-         p To learn more about our chocolate vodka, experience
+    //-         p and product, or email us at info@bouverycv.com
+    //- +b.main-gimme-some
+    //-     img(src="./images/gimme-more.png")
+    
+block additional-scripts
+    script.
+        $(window).on('load', function() {
+            $('.preloader').fadeOut()
+        
+        })
+    
+

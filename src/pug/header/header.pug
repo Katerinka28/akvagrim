@@ -1,0 +1,32 @@
+
+-var data = [{href:'about.html',title:'Про аквагрим'}, {href:'gallery.html',title:'Мои работы'}, {href:'contacts.html',title:'Контакты'}]
+
+    +b.header.clearfix
+        .container
+            +e.toggle.clearfix()
+                +e.toggle-item.SPAN
+                +e.toggle-item.SPAN
+                +e.toggle-item.SPAN
+            +e.part
+                +e.block    
+                    
+                    +e.A(href="index.html").logo-wrapper.clearfix
+                        +e.logo.IMG(src="./img/logo-mini-w.png" title="Home page")
+
+                +e.block.header-mob__hide        
+                    +e.nav.clearfix
+                        each el in data
+                            +e.A(href=el.href).link.clearfix #{el.title}
+
+
+                                               
+            +b.header__mobile
+                +e.mob-wrapper
+                    +e.mob-content
+                        +e.mob-menu
+                            +e.A(href="index.html").logo-wrapper.clearfix
+                                //- h3 Аквагрим Татьяна Громак
+                                +e.logo.IMG(src="./img/logo-w.png")     
+                            +e.nav.clearfix
+                                each el in data
+                                    A(href=el.href).header__link #{el.title}

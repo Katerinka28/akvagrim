@@ -1,0 +1,54 @@
+extends _layout
+
+block title
+    title Title of template
+
+    
+
+block content
+    
+    .preloader
+        img(src='./img/752.svg')
+    
+    .container
+        +b.content
+            +e.title
+                h1 Контактная информация
+            +e.text
+                p bla bla////    
+            +b.social
+                a(href='http://instagram.com/akvagrim.brd' target='_blank').insta
+                a(href='http://vk.com/akvagrim_v_brd' target='_blank').vk
+                a(href='href="viber://add?number=+380662823881"' target='_blank').viber
+            +b.FORM.feedback.clearfix
+                +e.title 
+                    h2 Напишите мне и мы ...
+                +e.contain
+                    label(class='title' for="name") Имя
+                    input(type="text" name="name" autofocus class="name" id="name" data-msg-required='Это поле обязательно к заполнению')
+                +e.contain
+                    label(class='title' for="tel") Телефон
+                    input(type="tel" name="tel" class="tel" id="tel" data-msg-required="Это поле обязательно к заполнению" )
+                +e.contain
+                    label(class='title' for="mail") Email
+                    input(type="text" name="mail" class="mail" id="mail" data-msg-required="Это поле обязательно к заполнению" data-msg-emailMethod="Введите корректный email адрес" )
+                +e.contain
+                    label(class='title' for="message") Сообщение
+                    input(type="text" name="message" class="message" id="message" data-msg-required="Это поле обязательно к заполнению")                  
+                +e.contain
+                    button(type="submit" class="submit") Отправить сообщение
+    +b#callbackthanks.callbackthanks.mfp-hide.zoom-anim-dialog
+        +e.title
+            H2 Спасибо!
+        +e.text 
+            p Я свяжусь с Вами в ближайшее время               
+            
+    
+
+block additional-scripts
+    script.
+        $(window).on('load', function() {
+            $('.preloader').fadeOut()
+        
+        })
+    

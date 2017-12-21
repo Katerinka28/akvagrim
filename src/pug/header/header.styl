@@ -1,0 +1,240 @@
+// .header 
+//     .container
+//         width 100%
+
+.header
+    // @extends .container
+    background-color transparent
+    padding 20px 0
+    position relative
+
+    // position fixed
+    // top 0
+    // left 0
+    // right 0
+    z-index 1000
+    height 99px
+    // &--tiny
+    //     height 63px
+    //     padding 5px 0
+    //     background-color black
+    //     z-index 1000
+        
+    .header-mob__hide
+        display none
+    .header__mobile 
+        display block
+        width 222px
+        height 100%
+        overflow-y auto
+        background-position left top
+        position fixed
+        left -100%
+        top 0
+        z-index 9999
+        -webkit-transition left 0.7s ease-out 0.01s
+        -moz-transition left 0.7s ease-out 0.01s
+        transition left 0.7s ease-out 0.01s
+        background linear-gradient(90deg,rgba(198,175,185, 1), rgba(152, 111, 129, 1), rgba(141,96,115, 1))
+        .header__mob-content
+            .header__mob-menu        
+                .header__menu
+                    float none
+                    padding-top 20px
+                .header__nav
+                    padding-top 30px     
+                .header__link
+                
+                    text-decoration none
+                    font-size 14px 
+                    font-weight 400
+                    color black
+                    float none
+                    line-height 42px
+                    text-align center
+                    display block
+                    text-decoration none
+                    text-transform uppercase
+                    color #ffffff
+                    font-family $titlef
+                    &:hover
+                        color #ccc
+                .header__logo-wrapper
+                    & h3 
+                        color #543945
+                        text-transform uppercase
+                        text-align center
+                    .header__logo 
+                        margin-top 20px        
+                    
+      
+        
+    .is-mobile-header
+        position fixed
+        left 0
+        top 0
+        .header__mob-wrapper 
+            width 100%
+           
+            position relative
+      
+    
+    &__logo-wrapper
+        width 154px
+        display block
+        text-decoration none 
+        margin 3px auto 0
+        
+        // position: absolute;
+        // left: 50%;
+        // transform: translateX(-50%);
+        // z-index 1
+
+        
+    &__logo
+        transition: all 0.5s ease;
+        filter: none;
+        opacity: 1;
+        display block
+        width 153px
+
+        height  61px
+        float left
+        
+    &__toggle
+        position absolute
+        left 15px
+        width 22px
+        cursor pointer
+        height 18px
+        top 20px
+        transition 0.6s linear all
+
+        display block
+        // z-index 1000
+        margin-top 5px
+        &--active
+
+            .header__toggle-item
+                &:nth-child(1)
+                    transform: rotate(45deg);
+                    top: 5px;
+                &:nth-child(3)
+                    transform rotate(-45deg)
+                    bottom 10px
+                &:nth-child(2)
+                    transform translateX(-100px)
+                    opacity 0        
+
+            
+        &:hover
+
+            border-radius 3px
+
+                
+             
+    &__toggle-item
+        position absolute
+        border-radius 1px
+        width 100%
+        display block
+        height 3px
+        left 0
+        // transform translateX(-50%)
+        background-color white
+        transition .2s linear all
+        
+        &:nth-child(1)
+            top 0px
+        &:nth-child(2)
+            top 50%
+            transform translateY(-50%)
+            
+        &:nth-child(3)
+            bottom 0px
+    &__nav
+        .header__link
+            padding-top 20px 
+            font-size: 17px;
+            font-weight: 400;
+            color: rgba(141,96,115, 1);
+            &:hover
+                color: #000;
+            &:focus
+                color: #000;
+            &:active
+                color: #000;
+            
+            &.is-active
+                color black            
+                    
+    
+@media(min-width 576px)
+    .header 
+        .container
+            width 540px        
+@media(min-width 768px)
+    .header 
+        .container
+            width 720px
+            
+@media(min-width 992px)
+    .header 
+        .container
+            width 960px
+
+
+//         .header__mobile 
+//             width 70% 
+//             .header__link
+//                 font-size 16px !important         
+@media(min-width 1200px)
+    .header 
+        .container
+            width 1150px
+    .header__toggle
+        display none
+    .header        
+        &__block
+            float left    
+        .header-mob__hide
+            float right 
+            display block
+            padding-left 40px
+        &__mob-icon
+            display none    
+        &__logo-wrapper 
+            left 15px
+            transform translateX(0)
+  
+        &__link
+            font-size: 17px !important
+            font-weight: 400;
+            color: rgba(198,175,185, 1);
+            padding-left 20px
+            float left
+            text-decoration none
+            text-shadow 1px 1px 1px white
+            
+            &:hover
+                color: #000;
+            &:focus
+                color: #000;
+            &:active
+                color: #000;        
+                    
+           
+        &__link:first-child 
+            padding-left 10px
+// 
+                                           
+                
+                           
+        
+                
+                                                                          
+                    
+
+                
+                                      
+                           

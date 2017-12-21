@@ -1,0 +1,417 @@
+-var datamob = [{href:'index.html',title:'Главная'},{href:'host.html', title:'Ведущий'}, {href:'coach.html', title:'Тренеры'},{href:'about.html', title:'О проекте'}, {href:'liga.html', title: 'Региональные лиги'}, {href:'command.html',title:'Команды'}, {href:'news.html',title:'Новости'}, {href:'afisha.html',title:'Концерты'},{href:'festival.html',title:'ФЕСТИВАЛЬ 2018'},  {href:'concert.html',title:'СВЯЗАТЬСЯ С НАМИ'}, {href:'reklama.html',title:'Реклама'}]
+-var data = [{title:'О Лиге смеха', href:'#', datadropdown:'true'},{href:'liga.html', title: 'Региональные лиги'}, {href:'command.html',title:'Команды'}, {href:'news.html',title:'Новости'}, {href:'afisha.html',title:'Концерты'}, {href:'festival.html',title:'ФЕСТИВАЛЬ 2018', dataactive:'true'} ]
+-var datadropdown =[{href:'host.html', title:'Ведущий'}, {href:'coach.html', title:'Тренеры'},{href:'about.html', title:'О проекте'}]
+mixin CreateHeader(optional)
+    
+    +b.header.clearfix
+        .container
+            +e.toggle.clearfix()
+                +e.toggle-item.SPAN
+                +e.toggle-item.SPAN
+                +e.toggle-item.SPAN
+            +e.part
+                +e.block    
+                    if(optional)
+                        +e.A(href="index.html" ).logo-wrapper.clearfix
+                            +e.logo(title="На главную")
+                    else 
+                        +e.A(href="javascript:void(0)").logo-wrapper.clearfix
+                            +e.logo
+                +e.block
+                    +e.A.lock#enter-btn-mob(href="") 
+                    //- Фестиваль 2018
+                    +e.A.exit#exit-btn-mob(href="")
+                        span
+                        span 
+                    +e.A.entered(href="personal.html")
+                        SPAN.icon-enter-icon
+                        span.icon-man
+                                
+                +e.block.header-mob__hide
+                    +b.top-part
+                        +e.social 
+                            a(href='https://www.facebook.com/ligasmeha/' target="_blank").icon-fb
+                            a(href='https://www.instagram.com/ligasmeha/?hl=ru' target="_blank").icon-insta         
+                            a(href='https://www.youtube.com/channel/UC2iLEQOjbk4CJszj34NtqHg/featured' target="_blank").icon-yb
+                        +b.buy-ticket
+                            a(href='#') Купить билеты
+                        +b.watch-video 
+                            a(href='video.html') Смотреть видео
+                        +b.public 
+                            a(href='reklama.html') Реклама   
+                        +b.lang-switch
+                            a(href='').is-active Рус
+                            span /    
+                            a(href='') Укр
+                        +b.enter.A(href="")#enter-btn Вход для команд
+                            span.icon-enter-icon
+                            //- a#enter-btn() Фестиваль 2018
+                            //- a(href="") Вход для команд   
+                            A#exit-btn(href="").header__exit
+                                span
+                                span      
+                                    
+                +e.block.header-mob__hide 
+                    +b.bottom-part
+
+                        +e.link.UL     
+                               
+                            li
+                                a(href="") О Лиге смеха
+                                ul.dropdown
+                                    each el in datadropdown
+                                        li
+                                            a(href=el.href) #{el.title}
+                            li 
+                                a(href="liga.html") Региональные лиги
+                            li 
+                                a(href="command.html") Команды
+                            li 
+                                a(href="news.html") Новости
+                            li 
+                                a(href="afisha.html") Концерты    
+                            li 
+                                a(href="festival.html" class="is-active") ФЕСТИВАЛЬ 2018  
+
+                                        
+                                        
+                            //- +e.dropdown.UL
+                            //-     each el in datadropdown
+                            //-         li
+                            //-             a(href=el.href) #{el.title}
+                        +e.connect.A(href='concert.html') Связаться с нами
+                            span.icon-letter          
+
+                    
+                    
+                //- +e.block.header-mob__hide
+                //-     +b.buy-ticket
+                //-         a(href='#' target="_blank") Купить билеты
+                
+                                               
+            +b.header__mobile
+                +e.mob-wrapper
+                    +e.mob-content
+                        +e.mob-menu
+                            +b.lang-switch
+                                a(href='').is-active Рус
+                                span /    
+                                a(href='') Укр
+                            +e.social 
+                                a(href='https://www.facebook.com/ligasmeha/' target="_blank").icon-fb
+                                a(href='https://www.instagram.com/ligasmeha/?hl=ru' target="_blank").icon-insta         
+                                a(href='https://www.youtube.com/channel/UC2iLEQOjbk4CJszj34NtqHg/featured' target="_blank").icon-yb    
+                            +b.buy-ticket
+                                a(href='#') Купить билеты
+                            +b.watch-video 
+                                a(href='#') Смотреть видео
+                            +b.connect
+                                a(href='#' target="_blank") Связаться с нами    
+
+                            +e.link-mob.clearfix
+                                each el in datamob
+                                    A(href=el.href) #{el.title}
+   
+            
+mixin CreateHeaderPP(optional)
+    +b.header.clearfix
+        .container
+            +e.toggle.clearfix()
+                +e.toggle-item.SPAN
+                +e.toggle-item.SPAN
+                +e.toggle-item.SPAN
+            +e.part
+                +e.block    
+                    if(optional)
+                        +e.A(href="index.html" ).logo-wrapper.clearfix
+                            +e.logo(title="На главную")
+                    else 
+                        +e.A(href="javascript:void(0)").logo-wrapper.clearfix
+                            +e.logo
+                +e.block
+                    .out-btn-mob
+                        SPAN.icon-enter-icon
+                        span.icon-man
+                        span.icon-messages 
+                        p 5
+                                
+                //- +e.block.header-mob__hide 
+                //-     +e.link       
+                //-         each el in data
+                //-             a(href=el.href) #{el.title}
+                
+                   
+                +e.block.header-mob__hide
+                    +b.top-part
+                        +e.social 
+                            a(href='https://www.facebook.com/ligasmeha/' target="_blank").icon-fb
+                            a(href='https://www.instagram.com/ligasmeha/?hl=ru' target="_blank").icon-insta         
+                            a(href='https://www.youtube.com/channel/UC2iLEQOjbk4CJszj34NtqHg/featured' target="_blank").icon-yb
+                        +b.buy-ticket
+                            a(href='#') Купить билеты
+                        +b.watch-video 
+                            a(href='video.html') Смотреть видео
+                        +b.public 
+                            a(href='reklama.html') Реклама   
+                        +b.lang-switch
+                            a(href='') Рус
+                            span /    
+                            a(href='') Укр
+                      
+                        +b.out
+                            span.icon-enter-icon
+                            span.icon-man
+                            A(href='')#message-popup
+                                span.icon-messages
+                                p 5
+                            a#out-btn(href="") Выход 
+                    
+                +e.block.header-mob__hide
+                    +b.bottom-part
+
+                        +e.link       
+                            each el in data
+                                a(href=el.href data-dropdown=el.datadropdown) #{el.title}
+                            +e.dropdown.UL
+                                each el in datadropdown
+                                    li
+                                        a(href=el.href) #{el.title}
+                        +e.connect
+                            span.icon-letter
+                            a(href='concert.html') Связаться с нами
+                   
+                
+                                               
+            +b.header__mobile
+                +e.mob-wrapper
+                    +e.mob-content
+                        +e.mob-menu
+                            +b.lang-switch
+                                a(href='') Рус
+                                span /    
+                                a(href='') Укр
+                            +e.social 
+                                a(href='https://www.facebook.com/ligasmeha/' target="_blank").icon-fb
+                                a(href='https://www.instagram.com/ligasmeha/?hl=ru' target="_blank").icon-insta         
+                                a(href='https://www.youtube.com/channel/UC2iLEQOjbk4CJszj34NtqHg/featured' target="_blank").icon-yb    
+                            +b.buy-ticket
+                                a(href='#') Купить билеты
+                            +b.watch-video 
+                                a(href='#') Смотреть видео
+                            +b.connect
+                                a(href='#' target="_blank") Связаться с нами    
+                            +e.link-mob.clearfix
+                                each el in datamob
+                                    A(href=el.href) #{el.title}
+            //- +b.pp__mobile
+            //-     +e.mob-mes
+            //-         +b.out-mob
+            //-             a#out-btn-mob(href="") Выход 
+            //-         +e.title
+            //-             h2 Сообщение от лиги смеха
+            //-         -for(var x=0; x<3; x++)
+            //-             +CreateMessage
+            //-         +b.btn-more-msg
+            //-             a(href='more-message.html') Читать еще  
+            
+
+mixin CreateMessage
+    +b.message.A(href='javascript:void(0)')
+        +e.data
+            SPAN.icon-letter
+            p 16.09.2017
+        +e.text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugiat iste distinctio nostrum, voluptates quo voluptatibus modi possimus aperiam, omnis obcaecati.
+        
+mixin CreateCard
+    +b.card.A(href='command-page.html')
+
+        +e.img
+            img(src='./img/comand-item-img.png') 
+        +e.title
+            h3 Библейская сборная
+        +e.location 
+            span.icon-location
+            p Харьков
+            p / 
+            p 2015
+        +e.master
+            h6 Тренер:
+            p Игорь Ласточкин
+
+mixin breadcrumbs(last, ...items)
+    +b.breadcrumb
+        .container
+            +e.UL.list&attributes(attributes)
+                each item in items
+                    +e.LI.item
+                        // if breadcrumb is single
+                        if (items.length === 0)
+                           +e.span.link= item
+                        else
+                            +e.A(href=item.href).link= item.title
+
+                if last
+                    +e.LI.item
+                        +e.SPAN.link-current= last
+                else
+mixin CreateCommand 
+    +b.command.clearfix
+        +e.left-part
+            .img-wrapper
+                img(src='http://ligasmeha.com/wp-content/uploads/2017/11/Potap-234x350.jpg')
+            +e.master
+                h6 Тренер:
+                p Сергей Сивоха             
+            +e.location.clearfix
+                span.icon-location
+                p Харьков
+                p / 
+                p 2015
+        +e.right-part
+            .img-wrapper
+                img(src='http://ligasmeha.com/wp-content/uploads/2017/11/BIBLEJSKAYA-SBORNAYA-1024x684.jpg')
+            //- iframe(frameborder="0" allowfullscreen)   
+mixin CreateAfisha 
+    +b.item 
+        +e.label
+            h5 16
+            p 09 / 2017
+        +e.title 
+            h3 ТЕЛЕВИЗИОННАЯ
+            h3 ЛИГА СМЕХА
+        +e.text
+            p Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки 
+        +e.location
+            span.icon-location
+            p Харьков
+            p / 
+            p Площадь Свободы
+        +e.data
+            span.icon-calendar
+            p 16 сентября 2017
+            p /
+            p 19:00
+
+mixin CreateIndexNewsLine
+    +b.index-news.A(href='news-page.html')
+        +e.label
+            h5 16
+            p 09 / 2017
+        +e.title 
+            h3 Летний спад активности.
+            h3 Ситуация в индустрии
+        +e.text
+            p Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный     
+mixin CreateNews
+    +b.news.A(href='news-page.html')
+        +e.img
+            img(src='./img/news.png') 
+        +e.label
+            h5 16
+            p 09 / 2017
+        +e.title 
+            h3 Летний спад активности.
+            h3 Ситуация в индустрии
+        +e.text
+            p Разнообразный и богатый опыт реализация намеченных плановых заданий способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный 
+        +e.location
+            span.icon-location
+            p Харьков 
+mixin CreateNewsColumn
+    +b.news-column.A(href='news-page.html')
+        +e.img
+            img(src='./img/preview.png')
+        +e.text 
+            h6 16.09.2017
+            h3 Летний спад активности. Ситуация в индустрии    
+mixin CreateConcert
+    .swiper-slide
+        .text-swiper
+            h3 Пригласить команду
+            h2 VIP Тернополь
+            p Команда с нестандартным мышлением и отличным чувством юмора
+        .swiper-img
+            img(src='./img/concert.png')                    
+mixin CreateMc
+    .swiper-slide
+        .img-mc
+            .img-wrap
+                img(src='./img/mc.png')
+            a(href='https://www.facebook.com/' target="_blank").fb
+                span.icon-fff    
+        .desc-mc
+            h4 НИКОЛАЙ
+            h4 CЕМЕНОВ
+        .command-mc
+            p Команда
+            p Vip Тернополь  
+mixin Createbaner
+    +b.event
+        +e.img
+            img(src='./img/comand-item-img.png')
+        +e.label
+            img(src='./img/label-bg.png')
+            h5 50
+            p мероприятий
+mixin CreateLigi
+    +b.liga-of-city.clearfix
+        +e.img
+            img(src='./img/liga.png') 
+        +e.right-part      
+            +e.title
+                h2 Харьков
+            +e.text
+                p.
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            +e.editor
+                p <strong>Редакторы:</strong> Александр Комаровский, Николай Банасевич
+            +e.more
+                a(href='liga-page.html') Подробнее
+                    span.icon-right-arrow
+mixin CreateEditor
+    +b.editor
+        .img-mc
+            .img-wrap
+                img(src='./img/mc.png')
+            a(href='https://www.facebook.com/' target='_blank').fb
+                span.icon-fff    
+        .desc-mc
+            h4 Николай Семенов
+                            
+mixin CreateCoach
+    +b.coach 
+        +e.img 
+            img(src="./img/test2.jpg")
+        +e.text 
+            h3 Елена Кравец
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil libero suscipit nemo neque fuga voluptas, fugiat rerum vel vero obcaecati minus, laborum quod laboriosam distinctio fugit cum autem error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil libero suscipit nemo neque fuga voluptas, fugiat rerum vel vero obcaecati minus, laborum quod laboriosam distinctio fugit cum autem error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil libero suscipit nemo neque fuga voluptas, fugiat rerum vel vero obcaecati minus, laborum quod laboriosam distinctio fugit cum autem error.s
+mixin CreateVideo
+    +b.video
+        +e.preview
+            +e.img
+                img(src='./img/test2.jpg')
+            +e.mask.A(href = 'https://www.youtube.com/watch?v=NHZ4SAZ9D8w') 
+                img(src = './img/ytb-btn.png')
+        +e.desc        
+            +e.label
+                h5 16
+                p 09 / 2017
+            +e.title 
+                h3 Летний спад активности.
+                h3 Ситуация в индустрии
+            
+                p Разнообразный и богатый опыт реализация намеченных плановых заданий способствует  подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный  
+mixin CreateTable(headings, rows)
+    +b.TABLE.table-games.table
+        thead
+            +e.TR.tr
+                each heading in headings 
+                    +e.TH.th=heading
+        tbody
+            each row in rows 
+                +e.TR.tr
+                    each td , i in row
+                        +e.TD.td(data-th=headings[i])
+                            span=td
+                            

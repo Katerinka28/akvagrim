@@ -1,0 +1,28 @@
+extends _layout
+
+block title
+    title Title of template
+
+    
+
+block content
+    
+    .preloader
+        img(src='./img/752.svg')
+
+    .container
+        +b.content
+            +e.title
+                h1 Мои работы
+    +b.grid
+        .grid-sizer
+        -for(var x=0; x<24; x++)
+            +e.item.A(href='./img/tile'+x+'.jpg')
+                img(src='./img/tile'+x+'.jpg') 
+block additional-scripts
+    script.
+        $(window).on('load', function() {
+            $('.preloader').fadeOut()
+        
+        })                 
+            

@@ -1,0 +1,9 @@
+//=include lib/jquery.js
+//=include lib/inputmask.js
+//=include lib/slick.min.js
+//=include lib/validator.js 
+//=include lib/swiper.js
+//=include lib/sidebar.js
+//=include lib/masonry.js
+//=include lib/jquery.magnific-popup.js
+//=include common.js

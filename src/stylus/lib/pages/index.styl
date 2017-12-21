@@ -1,0 +1,186 @@
+.swipper-container
+    width 100%
+    height 100vh
+    // min-height 325px
+    // max-height 380px
+    position absolute
+    top 0
+    .swiper-slide
+        width 100%
+        height auto
+        position relative
+        background-size cover
+        background-position center
+        
+        +l()
+            &:nth-child(1)
+                background-image url('./../img/slide2.png') !important
+            &:nth-child(2)
+                background-image url('./../img/slide1.png') !important
+            &:nth-child(3)
+                background-image url('./../img/slide2.png') !important
+            &:nth-child(4)
+                background-image url('./../img/slide1.png') !important
+                    
+        
+        &>img 
+            width 100%
+            height auto
+            position absolute
+        .slide2
+            display none
+        .slide1
+            display none
+        .slide3
+            display none
+        .slide1-mobile, .slide2-mobile, .slide3-mobile
+            max-height 450px                
+        .swiper-title
+            display none    
+        .swiper-text
+            position absolute
+            top 84%
+            
+            &>h2 
+                color white 
+                letter-spacing 9.4px
+                font-size 16px
+                width 170px
+                font-weight 300
+                padding-left 15px
+                line-height 28px
+            &>p 
+                color white
+                width 145px
+                font-family GothamLight
+                font-size 9px
+                letter-spacing 2px
+                text-transform uppercase  
+                padding-left 15px 
+                line-height 20px
+
+        &:nth-child(4)
+            .swiper-text
+                &>h2 
+                    color black
+                &>p 
+                    color black                           
+.grid:after
+    content: '';
+    display: block;
+    clear: both;
+
+.grid 
+    margin-bottom 20px
+    +l()
+        margin-bottom 40px
+    // height 500px !important
+    &:after
+        content ''  
+        display: block;
+        clear: both;  
+    .grid-sizer
+        width 50%
+        +t()
+            width 33.3%
+    &__item
+        width 50%    
+        height auto
+        &:hover 
+            z-index 50
+            & img 
+                
+                transform scale(1.05)
+                transition 0.5s
+        +t()
+            width 33.3%
+        &>img 
+            display block 
+            border 1px solid white
+            height 100%
+            width 100%       
+.content
+    &__title 
+        margin-bottom 20px 
+        & h1 
+            color rgba(198,175,185, 1)
+            font-size 20px
+            text-align center
+            +t()
+                font-size 30px 
+            +l()
+                font-size 50px
+                text-align left
+    &__text
+        font-size 15px
+        line-height 30px 
+        +l()
+            font-size 17px
+    &__img-wrapper
+        margin 10px 0
+        +t()
+            margin 20px 0
+.feedback
+    &__contain
+        clear both
+        width 100%
+        margin-bottom 40px
+        position relative
+        
+        &>label 
+            width 100%
+            font-size 13px
+            font-weight bold
+        &>input 
+            width 100%
+            height: 51px;
+            border: 1px solid rgba(198,175,185, 1);
+            color black
+            padding-left 10px
+            border-radius 10px
+            &:focus
+                border-color: white
+             
+        &>button
+            width 100%
+            height 51px
+            background-color rgba(198,175,185, 1)
+            font-size 14px
+            border-radius 10px
+            color white
+        
+        label.error
+            position absolute  
+            left 0
+            top 73px 
+            color #d00000
+            font-size 11px               
+.callbackthanks
+    position relative
+    margin 0 auto
+    width 286px 
+    padding 20px 
+    transition ease-in 0.5s
+    background-color white 
+    +m()
+        width 540px
+        padding 60px
+   
+    &__title
+
+        padding-bottom 20px
+
+        &>h2 
+            color #131722
+            font-size 30px
+            text-align left
+            font-weight bold
+            +m()
+                font-size 40px
+    &__text
+        &>p 
+            color #131722
+            font-size 14px
+            text-align left
+            font-weight bold
+            padding-bottom 20px        

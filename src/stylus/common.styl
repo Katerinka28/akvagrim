@@ -1,0 +1,244 @@
+
+*
+    margin 0
+    padding 0
+    box-sizing border-box
+    -webkit-backface-visibility hidden
+
+
+$titlef = Pacifico
+$textf = ElMessiri
+$main = #a31315;
+$text = #131722;
+
+body
+    font-family $textf
+    font-size: 12px
+
+
+
+    
+.container-fluid
+    width 100%
+    
+    
+.clearfix:before,.clearfix:after 
+    content ""
+    display table
+    width 0
+    height 0
+    visibility hidden
+    
+.clearfix:after 
+    clear both
+    
+input::-webkit-input-placeholder 
+    font-family $textf
+    font-size 14px
+input::-moz-placeholder 
+    font-family $textf
+    font-size 14px
+   
+input::-moz-placeholder 
+    font-family $textf
+    font-size 14px
+input::-ms-input-placeholder 
+    font-family $textf
+    font-size 14px
+input::-webkit-inner-spin-button
+    display none
+    -webkit-appearance none
+select::-ms-expand 
+    display none
+img
+    border-style none
+    
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"]
+    -webkit-appearance none
+    -moz-appearance textfield
+    border-radius 0
+    font-family $textf
+    overflow auto
+    &::-ms-clear 
+            display none 
+button 
+    font-family $textf  
+
+select:focus::-ms-value {background-color: transparent; color:white;}
+select
+    -moz-appearance none
+//     appearance listbox  
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button 
+    -webkit-appearance none
+    
+    margin 0
+input[type='number']
+    -moz-appearance textfield
+input 
+    &::-webkit-input-placeholder{color: #131722}
+    &:-moz-placeholder {color: #131722}
+    &::-moz-placeholder {color: #131722}
+    &:-ms-input-placeholder {color: #131722}
+    &:focus::-webkit-input-placeholder {color: transparent;}
+    &:focus::-moz-placeholder {color: transparent}
+    &:focus:-moz-placeholder {color: transparent}
+    &:focus:-ms-input-placeholder {color: transparent}
+    &::-ms-clear {display: none} 
+    &:focus{border-color: #d00000}
+
+a, img, div, input, select
+
+    &:active, &:focus
+        outline none
+h1, h2, h3, h4, h5, h6
+    font-family $titlef
+    font-weight bold        
+        
+.wrapper-mask
+    z-index 2    
+
+.container 
+    
+    width 100%
+    transition .1s linear all
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    &--no-padding
+        padding 0 !important
+
+
+@media (min-width: 576px)
+    .container 
+        width: 540px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+@media (min-width: 768px)
+
+    .container 
+        width: 720px;
+        padding-right: 15px;
+        padding-left: 15px;
+@media (min-width: 992px)
+
+    .container 
+        width: 960px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+@media (min-width: 1200px)
+    .container 
+        width: 1150px;
+        padding 0 15px  
+.popup-wrapper 
+    position: absolute;
+    top: 50%;
+    /* height: 500px; */
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 10000;     
+img
+    max-width 100%             
+.wrapper
+    padding 0
+    position relative
+
+    min-height 100%
+    padding-bottom 50px
+    background-color #dccfd5
+    background url('./../img/bg.jpg') repeat-y
+    // background-size contain
+    // box-shadow: 1px 3px 73px 0px rgba(0, 0, 0, 0.13);  
+.no-scroll
+    height 100vh
+    overflow hidden  
+    padding 0 !important
+              
+.mask 
+    background-color rgba(0, 0, 0, .5)
+    position absolute
+    z-index 10000
+    top 0
+    left 0
+    width 100%
+    height 100%
+    transition 1s
+.breadcrumb
+    padding-top 80px 
+    position relative
+    z-index 5
+    +d()
+        padding-top 15px
+        height 53px
+        background-color white
+        box-shadow: -11px 18px 40px rgba(0, 0, 0, 0.08);
+    &__item 
+        display: inline-block 
+        vertical-align: top 
+        &:not(:last-child):after 
+            content: '/';
+            margin-right: 4px 
+            margin-left: 4px !important;
+        
+    // &:not(:last-child):hover 
+    //   color: red
+    //   cursor pointer
+    &__link
+        text-decoration none !important;
+        color #000000 
+        &:hover 
+          color: $main 
+    &__link-current 
+        color: #000 
+    &__list 
+        list-style-type: none !important
+        padding: 0 !important
+        position absolute
+        top 5px
+        z-index 5 
+                       
+        +d()
+            position absolute
+            top 5px
+            z-index 5
+            left 195px
+.breadcrumb--is-white
+    .breadcrumb__item
+        color white                   
+        .breadcrumb__link
+            color white 
+            &:hover 
+                color black 
+        .breadcrumb__link-current 
+            color: white 
+.is-active 
+    font-size 15px !important     
+.preloader
+    position fixed
+    z-index: 11123
+    width 100%
+    height 100%
+    overflowX hidden
+    top 0
+    background linear-gradient(45deg,rgba(198,175,185, 1), rgba(152, 111, 129, 1), rgba(141,96,115, 1))
+    img
+        width 100px
+        height 100px
+        position absolute
+        top 50%
+        left 50%
+        transform  translateY(-50%) translateX(-50%)       
+ 
+            
+    
+

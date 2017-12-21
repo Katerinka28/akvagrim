@@ -1,0 +1,18 @@
+extends _layout
+
+block title
+    title 404
+
+block content
+    -var array = [{title:'Главная', href:'index.html'}]
+    +CreateHeader(true)
+    +breadcrumbs('404', ...array)
+    
+    +b.p404.container
+       
+        +b.p404-title
+            p Ошибка 404
+        +b.p404-text
+            p Вы находитесь здесь потому, что запрашиваемая Вами страница не найдена или была перемещена по другому адресу
+        +b.p404-btn
+            button(onClick="location.href='index.html'") На главную
